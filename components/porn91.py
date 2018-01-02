@@ -12,6 +12,7 @@ class Porn91:
         self._enter_point = enter_point
         #self._pending_videos = []
         logging.debug("Porn inited!")
+        httputil.login_and_get_cookie("http://91porn.com/login.php")
 
     def fetch_home_page(self):
         """

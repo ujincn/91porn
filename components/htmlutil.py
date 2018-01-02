@@ -35,7 +35,7 @@ def get_all_video_link(raw_html):
     soup = BeautifulSoup(raw_html)
     for link in soup.findAll('a', href=True):
         if link['href'].find('viewkey=') > -1:
-            logging.debug("link %s" % link['href'])
+            # logging.debug("link %s" % link['href'])
             links.append(link['href'])
     return links
 

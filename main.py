@@ -12,8 +12,9 @@ if __name__ == '__main__':
     porn = porn91.Porn91()
 
     # fetch all video links
-    video_links = porn.fetch_home_page()
-    video_links += porn.fetch("http://91porn.com/video.php?category=rf")
+    video_links = []
+    # video_links = porn.fetch_home_page()
+    video_links += porn.fetch("http://www.91porn.com/v.php?category=hot&viewtype=basic")
     video_links = list(set(video_links))
 
     logging.debug("Found %u Video Links!" % len(video_links))
