@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 import os
-
-import httputil
 import logging
-import htmlutil
+
+from . import httputil
+from . import htmlutil
+
 
 
 class Porn91:
@@ -66,5 +67,11 @@ class Porn91:
 
         while file_name.find('\\') >= 0:
             file_name = file_name.replace('\\', '')
+
+        while file_name.find('?') >= 0:
+            file_name = file_name.replace('?', '')
+
+        while file_name.find(' ') >= 0:
+            file_name = ' '.join(file_name.split())
 
         return file_name
